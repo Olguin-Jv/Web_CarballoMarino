@@ -1,0 +1,84 @@
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 1366px;
+    height: 80px;
+    z-index: 100;
+    display: flex;
+    box-shadow: 3px 3px 9px #0000002a;
+    background: white;
+}
+
+nav #logo{
+    width: 20%;
+    min-width: 200px;
+    height: 100%;
+}
+nav #logo a {
+    height: 100%;
+    width: 200px;
+}
+nav #logo a img{
+    height: 45%;
+}
+nav #nav-menu {
+    position: absolute;
+    right: 0;
+    width: 50%;
+    min-width: 550px;
+    height: 100%;
+    display: flex;
+}
+nav #nav-menu div{
+    height: 100%;
+    width: 25%;
+    display: flex;
+    align-items: center;
+}
+
+nav #nav-menu div a {
+    font-size: 24;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+#burger{
+    display: none;
+    position: absolute;
+    width: 20%;
+    height: 100%;
+}
+
+button {
+    height: 35px;
+    width: 35px;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+button img {
+    height: 100%;
+    width: 100%;
+}
+
+@media screen and(max-width: 780px){
+
+    nav {
+        height: 55px;
+    }
+
+    #burger {
+        display: flex;
+    }
+
+    nav #logo {
+        width: 100%;
+    }
+
+    nav #nav-menu {
+        display: none;
+    }
+}
