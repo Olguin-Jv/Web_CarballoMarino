@@ -7,7 +7,7 @@
 }
 
 .estudio-container{
-    width: 500px;
+    width: 550px;
     margin: 6% auto 0 auto;
     padding: 0 18px;
     text-align: center;
@@ -39,11 +39,26 @@
     bottom: 0;
 }
 
+#first-line{
+    position: absolute;
+    top: 5%;
+    left: 15%;
+    height: 1000px;
+    width: 5px;
+    background: #fdc929;
+}
+
 @media screen and(max-width: 780px){
 
     #estudio img {
         width: 70%;
         left: 15%;
+    }
+
+    #first-line {
+        left: 0;
+        height: calc(100vw);
+        min-height: 430px;;
     }
 
 }
