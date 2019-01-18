@@ -1,38 +1,37 @@
 #hero-gallery{
     position: relative;
-    margin-top: 80px;
+    margin-top: 55px;
     width: 100%;
     height: calc(100vh - 80px);
     max-height: 680px;
 }
 
 #gallery {
-    width: 100%;
-    height: 100%;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
-#img-holder{
-    position: absolute;
-    overflow: hidden;
-    top: 0%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#gallery div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#img-holder img {
-    width: 150%;
-    height: auto;
+#gallery div img{
+  width: 100%;
+  height: auto;
 }
 
 #counter {
     position: absolute;
     width: 100%;
     height: 30px;
-    bottom: 5%;
+    bottom: 4%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -40,12 +39,30 @@
 }
 
 #counter div {
-    width: 13px;
-    height: 13px;
+    width: 8px;
+    height: 8px;
     margin: 0 5px;
     border-radius: 100%;
-    border: 2px solid gray;
+    border: none;
+    box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.7);
+}
+
+.dot-on {
+    background: #c3c3c3;
+}
+
+.dot-off {
     background: white;
+}
+
+.gradient {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0);
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(246,246,246,0.1) 37%, rgba(237,237,237,.2) 100%);
+  z-index: 90;
+  pointer-events: none;
 }
 
 #left-arrow, #right-arrow{
@@ -82,6 +99,114 @@
     color: white;
     text-shadow: 3px 3px 9px #0000002a;
 }
+
+
+.out {
+    left: -100vw;
+  }
+  .fromLeft {
+    left: -100vw;
+    -webkit-animation-name: fromLeft;
+    animation-name: fromLeft;
+    -webkit-animation-duration: 1500ms;
+    animation-duration: 1500ms;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+  }
+  @-webkit-keyframes fromLeft {
+    from {
+      left: -100vw;
+    }
+    to {
+      left: 0;
+    }
+  }
+  @keyframes fromLeft {
+    from {
+      left: -100vw;
+    }
+    to {
+      left: 0;
+    }
+  }
+  .toLeft {
+    left: 0;
+    -webkit-animation-name: toLeft;
+    animation-name: toLeft;
+    -webkit-animation-duration: 1500ms;
+    animation-duration: 1500ms;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+  }
+  @-webkit-keyframes toLeft {
+    from {
+      left: 0;
+    }
+    to {
+      left: -100vw;
+    }
+  }
+  @keyframes toLeft {
+    from {
+      left: 0;
+    }
+    to {
+      left: -100vw;
+    }
+  }
+  .fromRight {
+    left: 100vw;
+    -webkit-animation-name: fromRight;
+    animation-name: fromRight;
+    -webkit-animation-duration: 1500ms;
+    animation-duration: 1500ms;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+  }
+  @-webkit-keyframes fromRight {
+    from {
+      left: 100vw;
+    }
+    to {
+      left: 0;
+    }
+  }
+  @keyframes fromRight {
+    from {
+      left: 100vw;
+    }
+    to {
+      left: 0;
+    }
+  }
+  .toRight {
+    left: 0;
+    -webkit-animation-name: toRight;
+    animation-name: toRight;
+    -webkit-animation-duration: 1500ms;
+    animation-duration: 1500ms;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+  }
+  @-webkit-keyframes toRight {
+    from {
+      left: 0;
+    }
+    to {
+      left: 100vw;
+    }
+  }
+  @keyframes toRight {
+    from {
+      left: 0;
+    }
+    to {
+      left: 100vw;
+    }
+  }
+  .center {
+    left: 0;
+  }
 
 @media screen and(max-width: 850px){
 

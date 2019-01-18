@@ -1,0 +1,58 @@
+#menu-desplegable {
+    position: fixed;
+    top: 55px;
+    width: 90%;
+    max-width: 350px;
+    height: calc(100vh - 55px);
+    background: white;
+    z-index: 98;
+}
+
+#menu-desplegable div {
+    width: 100%;
+    height: 62px;
+    padding-left: 27px;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #005287;
+}
+
+#menu-desplegable div a{
+    font-size: 14px;
+    font-weight: 500;    
+}
+
+.menu-off {
+    left: -80%;
+}
+
+.menu-in {
+    animation-name: menuIn;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes menuIn {
+    from {
+        left: -80%;
+    }
+    to {
+        left: 0%;
+    }
+}
+
+
+.menu-out {
+    animation-name: menuOut;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes menuOut {
+    from {
+        left: 0%;
+    }
+    to {
+        left: -80%;
+    }
+}

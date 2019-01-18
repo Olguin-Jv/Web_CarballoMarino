@@ -8,6 +8,7 @@
 
 .estudio-container{
     width: 550px;
+    height: fit-content;
     margin: 6% auto 0 auto;
     padding: 0 18px;
     text-align: center;
@@ -42,23 +43,42 @@ h3{
 #first-line{
     position: absolute;
     top: 5%;
-    left: 15%;
+    right: calc(100vw * .9);
     height: 1000px;
-    width: 5px;
     background: #fdc929;
+    width: 5px;
 }
 
 @media screen and(max-width: 780px){
 
-    #estudio img {
-        width: 70%;
-        left: 15%;
+    // #estudio img {
+    //     width: 70%;
+    //     left: 15%;
+    // }
+
+    #first-line {
+        right: initial;
+        left: 0;
+        height: calc(90vw);
+        min-height: 430px;
+    }
+
+}
+
+@media screen and(max-width: 500px){
+
+    #estudio {
+        height: calc(100vh);
     }
 
     #first-line {
-        left: 0;
-        height: calc(100vw);
-        min-height: 430px;;
+        height: 350px;
+        min-height: initial;
+    }
+
+    #estudio img {
+        width: 100%;
+        left: initial;
     }
 
 }

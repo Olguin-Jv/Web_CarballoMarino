@@ -6,57 +6,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Carballo Marino - Arquitectos</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
     <script src="js/gallery.js"></script>
 </head>
 
 <body>
+
+    <section id="menu-desplegable" class="menu-off">
+        <div><a href="">Estudio</a></div>
+        <div><a href="">Servicios</a></div>
+        <div><a href="">Proyectos</a></div>
+        <div><a href="">Contacto</a></div>
+    </section>
+
     <nav>
         <div id="logo" class="center">
             <a href="#" class="center"><img src="img/Logo-CM.png" alt="Logo Carballo-Marino"></a>
         </div>
 
         <div id="burger" class="center">
-            <button class="center"><img src="img/burger.svg" alt=""></button>
+            <button onclick="toggleMenu()" class="center"><img src="img/burger.svg" alt=""></button>
         </div>
 
         <div id="nav-menu">
             <div><a href="#anchor-estudio">estudio</a></div>
             <div><a href="#anchor-servicios">servicios</a></div>
             <div><a href="#anchor-proyectos">proyectos</a></div>
-            <div><a href="#">contacto</a></div>
+            <div><a href="#anchor-contacto">contacto</a></div>
         </div>
+
     </nav>
 
+
     <section id="hero-gallery">
+        <div class="gradient"></div>
         <div id="gallery">
-            <div id="img-holder"><img src="img/slider/01.jpg" alt=""></div>
-            <!-- <div id="img-holder"><img src="img/slider/02.jpg" alt=""></div>
-                <div id="img-holder"><img src="img/slider/03.jpg" alt=""></div>
-                <div id="img-holder"><img src="img/slider/04.jpg" alt=""></div>
-                <div id="img-holder"><img src="img/slider/05.jpg" alt=""></div>
-                <div id="img-holder"><img src="img/slider/06.jpg" alt=""></div>
-                <div id="img-holder"><img src="img/slider/07.jpg" alt=""></div> -->
+            
+            <div class="center"><img src="img/slider/01.jpg" alt=""></div>
+            <div class="out"><img src="img/slider/02.jpg" alt=""></div>
+            <div class="out"><img src="img/slider/03.jpg" alt=""></div>
+            <div class="out"><img src="img/slider/04.jpg" alt=""></div>
+            <div class="out"><img src="img/slider/05.jpg" alt=""></div>
+            <div class="out"><img src="img/slider/06.jpg" alt=""></div>
+            <div class="out"><img src="img/slider/07.jpg" alt=""></div>
+            
         </div>
         <div id="counter">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            
         </div>
         <div id="left-arrow">
-            <div class="center"><button><img src="img/gallery-arrow.svg" alt=""></button></div>
+            <div class="center"><button onclick="changeImg('prev')"><img src="img/gallery-arrow.svg" alt=""></button></div>
         </div>
         <div id="right-arrow">
-            <div class="center"><button><img src="img/gallery-arrow.svg" alt=""></button></div>
+            <div class="center"><button onclick="changeImg('next')"><img src="img/gallery-arrow.svg" alt=""></button></div>
         </div>
-        <h1>Lorem ipsum dolor sit amet</h1>
     </section>
-
+    <script src="js/hero-gallery.js"></script>
+    
 
     <section id="estudio">
 
@@ -72,7 +79,9 @@
                 in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at
                 vero eros.</p>
         </div>
-        <img src="img/CM_IMG1.png" alt="planos">
+        <div id="studio-img">
+            <img src="img/CM_IMG1.png" alt="planos">
+        </div>
     </section>
 
     <section id="servicios">
@@ -121,6 +130,23 @@
         </div>
         <div id="p-container">
 
+            <div id="third-line"></div>
+
+            <div class="thumbnail">
+                <div class="p-description">
+                    <div class="data">
+                        <h4>Casa</h4>
+                        <p>Lomas de San Antonio</p>
+                    </div>
+                    <div class="link">
+                        <a href="">
+                            <p>Ver más</p>
+                        </a>
+                    </div>
+                </div>
+                <img src="img/thumbnail.jpg" alt="">
+            </div>
+
             <div class="thumbnail">
                 <div class="p-description">
                     <div class="data">
@@ -177,20 +203,7 @@
                 </div>
                 <img src="img/thumbnail.jpg" alt="">
             </div>
-            <div class="thumbnail">
-                <div class="p-description">
-                    <div class="data">
-                        <h4>Casa</h4>
-                        <p>Lomas de San Antonio</p>
-                    </div>
-                    <div class="link">
-                        <a href="">
-                            <p>Ver más</p>
-                        </a>
-                    </div>
-                </div>
-                <img src="img/thumbnail.jpg" alt="">
-            </div>
+
             <div class="thumbnail">
                 <div class="p-description">
                     <div class="data">
@@ -208,10 +221,60 @@
 
         </div>
 
+        <div class="ver-mas center">
+            <p>cargar más proyectos</p>
+        </div>
+
+    </section>
+
+    <section id="contacto">
+        <div id="anchor-contacto" class="anchor"></div>
+        <div id="info">
+            <p>Contacto:</p>
+            <ul>
+                <li><strong>info@carballomarinoarquitectos.com</strong></li>
+            </ul>
+            <p>Teléfono:</p>
+            <ul>
+                <li>Oficina Luján: <strong>(11) 15 5954-0115</strong></li>
+                <li>Oficina Pehuajó: <strong>(02396) 15 604-111</strong></li>
+            </ul>
+            <p>Dirección</p>
+            <ul>
+                <li><strong>Lavalle 353, Luján, Buenos Aires.</strong></li>
+                <li><strong>Hipólito Yrigoyen 897, Pehuajó, Buenos Aires.</strong></li>
+            </ul>
+            <p>Buscanos en nuestras redes sociales.</p>
+            <img src="img/facebook-icon.svg" alt="">
+        </div>
+
+        <img class="bkg" src="img/CM_IMG1.png" alt="">
+
     </section>
 
 
 
+    <footer>
+        <div class="f-container">
+            <div class="f-logo"><img src="img/Logo-CM.png" alt=""></div>
+            <div class="f-data">
+                <div class="f-dir1">
+                    <p>Lavalle 353, Luján, Buenos Aires.</p>
+                    <p class="f-div">&nbsp;-&nbsp</p>
+                    <p>Teléfono oficina Luján: (11) 15/5957-0115</p>
+                </div>
+                <div class="f-dir2">
+                    <p>Hipólito Yrigoyen 897, Pehuajó, Buenos Aires.</p>
+                    <p class="f-div">&nbsp;-&nbsp</p>
+                    <p>Teléfono oficina Pehuajó: (02396) 15 604-111</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="js/scripts.js"></script>
 </body>
 
 </html>

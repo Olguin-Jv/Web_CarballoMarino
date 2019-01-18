@@ -1,0 +1,59 @@
+#contacto {
+    position: relative;
+    width: 100%;
+    height: 600px;
+}
+
+#info {
+    height: fit-content;
+    padding-top: 5%;
+    margin-left: 18%;
+    font-size: 13px;
+}
+
+#info p {
+    margin-top: 20px;
+}
+
+li {
+    margin-left: 20px;
+    line-height: 30px;
+    list-style: none;
+}
+
+#info img {
+    margin: 5px 15px;
+}
+
+#contacto .bkg{
+    position: absolute;
+    width: 40%;
+    min-width: 400px;
+    height: auto;
+    bottom: 0;
+    right: 0;
+    height: auto;
+}
+
+@media screen and (max-width: 450px){
+
+    #contacto {
+        height: 530px;
+    }
+
+    #info {
+        margin-left: 5%;
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    li {
+        margin-left: 0%;
+        line-height: 20px;
+    }
+
+    #contacto .bkg{
+        width: 100%;
+        min-width: initial;
+    }
+}

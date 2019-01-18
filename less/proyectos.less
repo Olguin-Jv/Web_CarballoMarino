@@ -12,8 +12,8 @@
 
 }
 #p-title {
-    height: 90px;
-    margin-top: 30px;
+    height: fit-content;
+    margin-bottom: 30px;
     text-align: center;
     display: flex;
     align-items: center;
@@ -48,7 +48,7 @@
     position: absolute;
     width: 100%;
     height: 30%;
-    bottom: 0;
+    bottom: 3px;
     background: rgba(0, 0, 0, .8);
     font-size: 18px;
     color: white;
@@ -90,6 +90,28 @@
     content: " +";
 }
 
+.ver-mas {
+    height: 60px;
+    width: 100%;
+    background: #e7205b;
+}
+.ver-mas p {
+    font-size: 16px;
+    color: white;
+    padding-top: 5px;
+    text-transform: uppercase;
+}
+
+#third-line {
+    position: absolute;
+    top: 5%;
+    height: 500px;
+    right: calc(100vw * .9);
+    height: 1000px;
+    width: 5px;
+    background: #fdc929;
+    z-index: 0;
+}
 
 @media screen and (max-width: 780px) {
 
@@ -148,7 +170,36 @@
         content: "";
     }
 
+
+    .ver-mas p {
+        font-size: 12px;
+    }
+
+    #third-line {
+        left: 0;
+        height: 90%;
+    }
 }
 
+@media screen and (max-width: 630px) {
 
+    .ver-mas {
+        width: 100%;
+        max-width: initial;
+        min-width: initial;
+    }
 
+}
+
+@media screen and (max-width: 400px){
+    .thumbnail{
+        width: 100%;
+        margin: 3px 0px;
+        max-width: initial;
+        min-width: initial;
+    }
+
+    #third-line {
+        display: none;
+    }
+}
