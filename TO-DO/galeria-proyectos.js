@@ -1,0 +1,1 @@
+//la galería expandida en mobile no lleva botón de zoom

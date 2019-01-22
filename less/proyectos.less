@@ -47,35 +47,36 @@
 .p-description {
     position: absolute;
     width: 100%;
-    height: 30%;
-    bottom: 3px;
-    background: rgba(0, 0, 0, .8);
+    height: 25%;
+    top: 0;
+    background: red;
+    // background: rgba(0, 0, 0, .8);
     font-size: 18px;
     color: white;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
  .data {
-    width: 90%;
-    height: auto;
-    margin-top: 6px;
+    width: calc(65% - 15px);
+    height: fit-content;
     margin-left: 15px;
+    margin-right: 12px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #ffffff;
 }
 
-.data h4 {
-    font-size: 16px;
-    line-height: 20px;
-    font-weight: 600;
-
+.data h4, .data p{
+    font-size: 12px;
+    font-weight: 400;
+    color: #ffffff;
 }
 
-.data p {
-    font-weight: 300;
-    font-size: 14px;
-}
 .link {
-    position: absolute;
-    right: 20px;
-    bottom: 15px;
+    width: calc(45% - 40px);
+    background: #e7205b;
     padding-bottom: 3px;
     border-bottom: 1px solid white;
 }
@@ -84,10 +85,6 @@
     font-size: 16px;
     font-weight: 400;
     color: white;
-}
-
-.link a p::after {
-    content: " +";
 }
 
 .ver-mas {
@@ -120,12 +117,13 @@
         min-width: initial;
     }
 
+    //----------------------
     .thumbnail{
         width: 70%;
         max-width: 400px;
         min-width: 280px;;
     }
-
+    
     .p-description {
         position: absolute;
         width: 100%;
@@ -138,13 +136,13 @@
         justify-content: center;
     }
     
-     .data {
+    .data {
         width: 65%;
         height: 70%;
         height: auto;
         margin: 0;        
     }
-
+    
     .data h4, .data p {
         font-size: 12px;
         font-weight: 300;
@@ -169,12 +167,13 @@
     .link a p::after {
         content: "";
     }
-
-
+    //----------------------
+    
+    
     .ver-mas p {
         font-size: 12px;
     }
-
+    
     #third-line {
         left: 0;
         height: 90%;
