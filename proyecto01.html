@@ -11,25 +11,46 @@
     <link rel="stylesheet" href="css/projects-gallery.css">
 </head>
 
-<body>
-    <!-- nav -->
+<body onresize="onResizeAction()" onscroll="onScrollAction()">
+
+    <section id="menu-desplegable" class="menu-off">
+        <div><a class="burger-link" href="/index.html#anchor-estudio">Estudio</a></div>
+        <div><a class="burger-link" href="/index.html#anchor-servicios">Servicios</a></div>
+        <div><a class="burger-link" href="/index.html#anchor-proyectos">Proyectos</a></div>
+        <div><a class="burger-link" href="/index.html#anchor-contacto">Contacto</a></div>
+    </section>
+
     <nav>
         <div id="logo" class="center">
             <a href="#" class="center"><img src="img/Logo-CM.png" alt="Logo Carballo-Marino"></a>
         </div>
 
         <div id="burger" class="center">
-            <button class="center"><img src="img/burger.svg" alt=""></button>
+            <button onclick="toggleMenu()" class="center"><img src="img/burger.svg" alt=""></button>
         </div>
 
         <div id="nav-menu">
-            <div><a href="#anchor-estudio">estudio</a></div>
-            <div><a href="#anchor-servicios">servicios</a></div>
-            <div><a href="#anchor-proyectos">proyectos</a></div>
-            <div><a href="#">contacto</a></div>
+            <div><a id="btn-estudio" href="/index.html#anchor-estudio">estudio</a></div>
+            <div><a id="btn-servicios" href="/index.html#anchor-servicios">servicios</a></div>
+            <div><a id="btn-proyectos" href="/index.html#anchor-proyectos">proyectos</a></div>
+            <div><a id="btn-contacto" href="/index.html#anchor-contacto">contacto</a></div>
         </div>
+
     </nav>
     <!-- nav -->
+
+    <section id="full-gallery">
+            <div id="gallery-container">
+                <div id="gallery">
+                    <img src="projects/p_000/thumbnail.png" alt="">
+                </div>
+                <div id="gallery-buttons">
+                    <button><img class="first-button" src="img/full-arrow.png" alt=""></button>
+                    <button><img src="img/full-cross.png" alt=""></button>
+                    <button><img src="img/full-arrow.png" alt=""></button>
+                </div>
+            </div>
+    </section>
 
     <section id="project-title">
         <p>Lorem ipsum dolor sit amet</p>
@@ -141,6 +162,7 @@
     <!-- footer -->
 </body>
 
+<script src="js/scripts.js"></script>
 <script src="project-gallery.js"></script>
 
 </html>
