@@ -75,11 +75,6 @@ for (var i = 0; i < limit; i++) {
 
 dotsContainer.children[idx].className = 'dot-on';
 
-var autoScroll = setInterval(function () {
-    changeImg('next');
-    console.log('to next');
-}, 5000);
-
 function restartAutoScroll() {
     clearInterval(autoScroll);
     autoScroll = setInterval(function () {
@@ -102,3 +97,8 @@ function appendShit(parentName) {
         //recordar eliminar todo esto al hacerle close
     };
 }
+
+var autoScroll = setInterval(function () {
+        changeImg('next');
+        console.log('to next');
+    }, 5000);
