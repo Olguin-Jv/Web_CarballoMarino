@@ -1,4 +1,4 @@
-@galleryBkg: #9b9b9b;
+@galleryBkg: #f3f3f3;
 @duration: 1000ms;
 @scaleMinus: scale(.9);
 @scaleNormal: scale(1);
@@ -21,6 +21,8 @@
 
 #gal-button-left button, #gal-button-right button{
     cursor: pointer;
+    height: fit-content;
+    width: fit-content;
     z-index: 80;
 }
 
@@ -28,7 +30,7 @@
     right: 0;
 }
 
-#gal-button-right button{
+#gal-button-left button{
     transform: rotate(180deg);
 }
 
@@ -84,7 +86,7 @@
 ////animation here
 
 .min-left {
-    transform: translate(-103%, 0%);  
+    transform: translate(-103%, 0%) @scaleMinus;  
 }
 
 .min-from-left {
@@ -118,7 +120,7 @@
 }
 
 .min-right {
-    transform: translate(103%, 0%);    
+    transform: translate(103%, 0%) @scaleMinus;    
 }
 
 .min-from-right {

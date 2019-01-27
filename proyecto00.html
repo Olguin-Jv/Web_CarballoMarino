@@ -40,16 +40,25 @@
     <!-- nav -->
 
     <section id="full-gallery">
-        <div id="gallery-container">
-            <div id="gallery">
-                <img src="projects/p_000/thumbnail.png" alt="">
+        
+            <div id="gallery-container">
+                <div id="gallery">
+                    <img class="" src="img/numbers/num1.png" alt="">
+                    <img class="" src="img/numbers/num2.png" alt="">
+                    <img class="" src="img/numbers/num3.png" alt="">
+                    <img class="" src="img/numbers/num4.png" alt="">
+                    <img class="" src="img/numbers/num5.png" alt="">
+                    <img class="" src="img/numbers/num6.png" alt="">
+                    <img class="" src="img/numbers/num7.png" alt="">
+                    <img class="" src="img/numbers/num8.png" alt="">
+                </div>
+                <div id="gallery-buttons">
+                    <button onclick="fullToPrev()"><img class="first-button" src="img/full-arrow.png" alt=""></button>
+                    <button onclick="closeFullGallery()"><img src="img/full-cross.png" alt=""></button>
+                    <button onclick="fullToNext()"><img src="img/full-arrow.png" alt=""></button>
+                </div>
             </div>
-            <div id="gallery-buttons">
-                <button><img class="first-button" src="img/full-arrow.png" alt=""></button>
-                <button><img src="img/full-cross.png" alt=""></button>
-                <button><img src="img/full-arrow.png" alt=""></button>
-            </div>
-        </div>
+        <script src="js/full-gallery.js"></script>
     </section>
 
     <section id="project-title">
@@ -57,55 +66,55 @@
     </section>
 
     <section id="projects-gallery">
-        <div id="gal-button-left"><button onclick="minToLeft()"><img src="img/gallery-arrow.svg" alt=""></button></div>
-        <div id="gal-button-right"><button onclick="minToRight()"><img src="img/gallery-arrow.svg" alt=""></button></div>
+        <div id="gal-button-left"><button onclick="minToLeft()"><img src="img/min-arrow.png" alt=""></button></div>
+        <div id="gal-button-right"><button onclick="minToRight()"><img src="img/min-arrow.png" alt=""></button></div>
 
         <div id="img-container">
             <div id="gallery-images">
 
-                <div class="img min-left" data-idx='0'>
-                    <img src="img/numbers/num1.png" alt="">
-                    <div class="see-more"><button>Ver más</button></div>
+                <div class="img min-left">
+                    <img src="projects/p_000/min/01.png" alt="">
+                    <div class="see-more"><button onclick="toFullGallery(0)">Ver más</button></div>
                 </div>
 
-                <div class="img min-center" data-idx='0'>
-                    <img src="img/numbers/num2.png" alt="">
-                    <div class="see-more"><button>Ver más</button></div>
+                <div class="img min-center">
+                    <img src="projects/p_000/min/02.png" alt="">
+                    <div class="see-more"><button onclick="toFullGallery(1)">Ver más</button></div>
                 </div>
 
-                <div class="img min-right" data-idx='0'>
-                    <img src="img/numbers/num3.png" alt="">
-                    <div class="see-more"><button>Ver más</button></div>
+                <div class="img min-right">
+                    <img src="projects/p_000/min/03.png" alt="">
+                    <div class="see-more"><button onclick="toFullGallery(2)">Ver más</button></div>
                 </div>
 
-                <div class="img min-out" data-idx='0'>
-                    <img src="img/numbers/num4.png" alt="">
-                    <div class="see-more"><button>Ver más</button></div>
+                <div class="img min-out">
+                    <img src="projects/p_000/min/04.png" alt="">
+                    <div class="see-more"><button onclick="toFullGallery(3)">Ver más</button></div>
                 </div>
 
-                <div class="img min-out" data-idx='0'>
-                    <img src="img/numbers/num5.png" alt="">
-                    <div class="see-more"><button>Ver más</button></div>
+                <div class="img min-out">
+                    <img src="projects/p_000/min/05.png" alt="">
+                    <div class="see-more"><button onclick="toFullGallery(4)">Ver más</button></div>
                 </div>
 
-                <div class="img min-out" data-idx='0'>
-                    <img src="img/numbers/num6.png" alt="">
-                    <div class="see-more"><button>Ver más</button></div>
+                <div class="img min-out">
+                    <img src="projects/p_000/min/06.png" alt="">
+                    <div class="see-more"><button onclick="toFullGallery(5)">Ver más</button></div>
                 </div>
 
-                <div class="img min-out" data-idx='0'>
-                    <img src="img/numbers/num7.png" alt="">
-                    <div class="see-more"><button>Ver más</button></div>
+                <div class="img min-out">
+                    <img src="projects/p_000/min/07.png" alt="">
+                    <div class="see-more"><button onclick="toFullGallery(6)">Ver más</button></div>
                 </div>
 
-                <div class="img min-out" data-idx='0'>
-                    <img src="img/numbers/num8.png" alt="">
-                    <div class="see-more"><button>Ver más</button></div>
+                <div class="img min-out">
+                    <img src="projects/p_000/min/08.png" alt="">
+                    <div class="see-more"><button onclick="toFullGallery(7)">Ver más</button></div>
                 </div>
 
             </div>
         </div>
-        <script src="js/project-gallery.js"></script>
+        <script src="js/min-gallery.js"></script>
     </section>
 
     <section id="ficha-title">

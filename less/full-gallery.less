@@ -1,10 +1,12 @@
+@fullDuration: 1500ms;
+
 #full-gallery {
     position: fixed;
     width: 100%;
     max-width: 1366px;
     height: calc(100vh - 55px);
-    top: 55px;
-    z-index: 80;
+    top: 40px;
+    z-index: 81;
     background: rgba(0, 0, 0, 0.5);
     display: none;
     align-items: center;
@@ -12,41 +14,51 @@
 
 #gallery-container {
     position: relative;
-    height: 90%;
+    height: 85%;
+    max-height: 1366px;
     width: 100%;
+    background: pink;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
 #gallery {
     position: relative;
     height: 95%;
-    width: 60%;
+    width: 80%;
     min-width: 700px;
     margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    background: rgba(0, 0, 0, 0.5);
 }
 
-#gallery div img {
+#gallery img {
+    position: absolute;
     width: 100%;
+    max-width: 470px;
     height: auto;
+    
 }
 
 #gallery-buttons {
-    position: relative;
-    height: 3%;
-    width: 70%;
-    margin: 0 auto;
+    position: fixed;
+    bottom: 0;
+    height: 9%;
+    width: 100%;
+    max-width: 1366px;
     display: flex;
     justify-content: center;
+    align-items: center;
+    background: black;
 }
 
 #gallery-buttons button{
-    width: fit-content;
-    height: 100%;
+    width: auto;
+    height: 15px;
     margin: 0 10px;
 }
 
@@ -59,10 +71,80 @@
     transform: rotate(-180deg);
 }
 
+.full-out {
+    display: none;
+}
+
+.full-center {
+    display: initial;
+}
+
+.full-to-left {
+    display: initial;
+    animation-name: fullToLeft;
+    animation-duration: @fullDuration;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fullToLeft {
+    from{
+        transform: translate(0%, 0%);
+    }
+    to {
+        transform: translate(-200%, 0%);
+    }
+}
+
+.full-from-left {
+    animation-name: fullFromLeft;
+    animation-fill-mode: forwards;
+    animation-duration: @fullDuration;
+}
+
+@keyframes fullFromLeft {
+    from{
+        transform: translate(-200%, 0%);
+    }
+    to {
+        transform: translate(0%, 0%);        
+    }
+}
+
+.full-to-right {
+    animation-name: fullToRight;
+    animation-fill-mode: forwards;
+    animation-duration: @fullDuration;
+}
+
+
+@keyframes fullToRight {
+    from{
+        transform: translate(0%, 0%);        
+    }
+    to {
+        transform: translate(200%, 0%);
+    }
+}
+
+.full-from-right {
+    animation-name: fullFromRight;
+    animation-fill-mode: forwards;
+    animation-duration: @fullDuration;
+}
+
+
+@keyframes fullFromRight {
+    from{
+        transform: translate(200%, 0%);
+    }
+    to {
+        transform: translate(0%, 0%);        
+    }
+}
+
 @media screen and (max-width: 780px){
 
     #gallery, #gallery-buttons {
-        width: 95%;
         min-width: initial;
     }   
 
