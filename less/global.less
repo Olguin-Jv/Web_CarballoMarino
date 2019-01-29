@@ -24,9 +24,11 @@ a:link, a:visited, a:hover, a:active {
 
 .anchor {
     position: absolute;
+    cursor: pointer;
     top: -55px;
     width: 100%;
     height: 55px;
+    z-index: 1;
 }
 
 .center{
@@ -45,6 +47,13 @@ a:link, a:visited, a:hover, a:active {
     width: 100%;
     height: 100px;
     opacity: 0;
+    pointer-events: none;
+    z-index: 2;
+}
+
+p strong {
+    font-weight: 600;
+    font-style: italic;
 }
 
 @media screen and(max-width: 780px){

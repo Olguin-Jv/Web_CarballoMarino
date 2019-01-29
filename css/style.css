@@ -24,9 +24,11 @@ a:active {
 }
 .anchor {
   position: absolute;
+  cursor: pointer;
   top: -55px;
   width: 100%;
   height: 55px;
+  z-index: 1;
 }
 .center {
   display: -webkit-box;
@@ -48,6 +50,12 @@ a:active {
   width: 100%;
   height: 100px;
   opacity: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+p strong {
+  font-weight: 600;
+  font-style: italic;
 }
 @media screen and (max-width: 780px) {
   .anchor {
@@ -473,12 +481,16 @@ button img {
 #estudio {
   position: relative;
   width: 100%;
-  height: calc(100vh);
-  max-height: 750px;
-  min-height: 600px;
+  height: auto;
+  max-height: 850px;
+  min-height: 700px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 .estudio-container {
   width: 100%;
@@ -504,19 +516,21 @@ button img {
   width: 100%;
   max-width: 770px;
   margin: 0 auto;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 300;
   text-align: justify;
   line-height: 21px;
 }
-#estudio img {
-  position: absolute;
-  width: 450px;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  right: 0;
-  bottom: 0;
+#studio-img {
+  margin-top: 80px;
+  width: 100%;
+}
+#img-min {
+  display: none;
+}
+#img-full {
+  width: 100%;
+  height: auto;
 }
 #first-line {
   position: absolute;
@@ -540,14 +554,6 @@ button img {
     height: -moz-fit-content;
     height: fit-content;
   }
-  #estudio img {
-    position: initial;
-    display: block;
-    margin: 0 auto;
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-  }
   #first-line {
     right: initial;
     left: 0;
@@ -555,7 +561,21 @@ button img {
     min-height: 430px;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
+  #studio-img {
+    margin-top: initial;
+    width: 100%;
+  }
+  #img-full {
+    display: none;
+  }
+  #img-min {
+    position: initial;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+  }
   #first-line {
     height: 350px;
     min-height: initial;
@@ -598,6 +618,10 @@ button img {
   line-height: 21px;
   padding: 0 42px;
   text-align: justify;
+}
+.servicios-container p strong {
+  font-weight: 600;
+  font-style: italic;
 }
 #second-line {
   position: absolute;
@@ -648,6 +672,19 @@ button img {
   -ms-flex-align: center;
   align-items: center;
 }
+.hover-efect {
+  position: absolute;
+  width: 100%;
+  height: 98.5%;
+  background: black;
+  -webkit-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+  opacity: 0;
+}
+.hover-efect:hover {
+  opacity: 0.5;
+}
 #p-container {
   width: 80%;
   max-width: 830px;
@@ -671,9 +708,10 @@ button img {
   position: relative;
   width: 42%;
   margin: 6px;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: auto;
+}
+.unload {
+  display: none;
 }
 .thumbnail img {
   width: 100%;
@@ -694,6 +732,7 @@ button img {
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
+  pointer-events: none;
 }
 .data {
   width: calc(65% - 15px);
@@ -747,6 +786,7 @@ button img {
   font-size: 12px;
   font-weight: 400;
   color: white;
+  pointer-events: initial;
 }
 .ver-mas {
   height: 60px;
@@ -754,11 +794,16 @@ button img {
   margin-top: 31px;
   background: #e7205b;
 }
-.ver-mas p {
+.ver-mas button {
   font-size: 14px;
   font-weight: 700;
   color: white;
   text-transform: uppercase;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+  z-index: 20;
 }
 #third-line {
   position: absolute;
@@ -852,13 +897,18 @@ button img {
 #info p {
   margin-top: 20px;
 }
+#info a {
+  width: auto;
+  height: auto;
+  z-index: 30;
+}
+#info a img {
+  padding-top: 10px;
+}
 li {
   margin-left: 20px;
   line-height: 30px;
   list-style: none;
-}
-#info img {
-  margin: 5px 15px;
 }
 #contacto .bkg {
   position: absolute;
@@ -867,6 +917,7 @@ li {
   bottom: 0;
   right: 0;
   height: auto;
+  z-index: 20;
 }
 @media screen and (max-width: 450px) {
   #contacto {
@@ -923,6 +974,7 @@ footer {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  margin-right: 37px;
 }
 .f-logo img {
   height: 70%;
@@ -979,6 +1031,7 @@ footer {
   .f-logo {
     height: 45px;
     margin: 5px;
+    margin-right: initial;
   }
   .f-logo img {
     max-height: 21px;

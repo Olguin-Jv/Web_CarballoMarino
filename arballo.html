@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/proyects-page.css">
+    <link rel="stylesheet" href="css/projects-gallery.css">
+</head>
+
+<body onresize="onResizeAction()" onscroll="onScrollAction()">
+
+    <section id="menu-desplegable" class="menu-off">
+        <div><a class="burger-link" href="/index.html#anchor-estudio">Estudio</a></div>
+        <div><a class="burger-link" href="/index.html#anchor-servicios">Servicios</a></div>
+        <div><a class="burger-link" href="/index.html#anchor-proyectos">Proyectos</a></div>
+        <div><a class="burger-link" href="/index.html#anchor-contacto">Contacto</a></div>
+    </section>
+
+    <nav>
+        <div id="logo" class="center">
+            <a href="/index.html" class="center"><img src="img/Logo-CM.png" alt="Logo Carballo-Marino"></a>
+        </div>
+
+        <div id="burger" class="center">
+            <button onclick="toggleMenu()" class="center"><img src="img/burger.svg" alt=""></button>
+        </div>
+
+        <div id="nav-menu">
+            <div><a id="btn-estudio" href="/index.html#anchor-estudio">estudio</a></div>
+            <div><a id="btn-servicios" href="/index.html#anchor-servicios">servicios</a></div>
+            <div><a id="btn-proyectos" href="/index.html#anchor-proyectos">proyectos</a></div>
+            <div><a id="btn-contacto" href="/index.html#anchor-contacto">contacto</a></div>
+        </div>
+
+    </nav>
+    <!-- nav -->
+
+    <section id="full-gallery">
+
+        <div id="gallery-container">
+            <div id="gallery">
+                <img class="" src="projects/p_005/full/01.jpg" alt="">
+                <img class="" src="projects/p_005/full/02.jpg" alt="">
+                <img class="" src="projects/p_005/full/03.jpg" alt="">
+                <img class="" src="projects/p_005/full/04.jpg" alt="">
+                <img class="" src="projects/p_005/full/05.jpg" alt="">
+                <img class="" src="projects/p_005/full/06.jpg" alt="">
+                <img class="" src="projects/p_005/full/07.jpg" alt="">
+                <img class="" src="projects/p_005/full/08.jpg" alt="">
+            </div>
+            <div id="gallery-buttons">
+                <button onclick="fullToPrev()"><img class="first-button" src="img/gallery-arrow.svg" alt=""></button>
+                <button onclick="closeFullGallery()"><img src="img/full-cross.png" alt=""></button>
+                <button onclick="fullToNext()"><img src="img/gallery-arrow.svg" alt=""></button>
+            </div>
+        </div>
+        <script src="js/full-gallery.js"></script>
+    </section>
+
+    <section id="project-title">
+        <p>- Arballo -</p>
+    </section>
+
+    <section id="projects-gallery">
+        <div id="gal-button-left"><button onclick="minToLeft()"><img src="img/min-arrow.png" alt=""></button></div>
+        <div id="gal-button-right"><button onclick="minToRight()"><img src="img/min-arrow.png" alt=""></button></div>
+
+        <div id="img-container">
+            <div id="gallery-images">
+
+                <div class="img min-left">
+                    <img src="projects/p_005/min/01.png" alt="">
+                    <div class="see-more"><button onclick="toFullGallery(0)">Ver más</button></div>
+                </div>
+
+                <div class="img min-center">
+                    <img src="projects/p_005/min/02.png" alt="">
+                    <div class="see-more"><button onclick="toFullGallery(1)">Ver más</button></div>
+                </div>
+
+                <div class="img min-right">
+                    <img src="projects/p_005/min/03.png" alt="">
+                    <div class="see-more"><button onclick="toFullGallery(2)">Ver más</button></div>
+                </div>
+
+                <div class="img min-out">
+                    <img src="projects/p_005/min/04.png" alt="">
+                    <div class="see-more"><button onclick="toFullGallery(3)">Ver más</button></div>
+                </div>
+
+                <div class="img min-out">
+                    <img src="projects/p_005/min/05.png" alt="">
+                    <div class="see-more"><button onclick="toFullGallery(4)">Ver más</button></div>
+                </div>
+
+                <div class="img min-out">
+                    <img src="projects/p_005/min/06.png" alt="">
+                    <div class="see-more"><button onclick="toFullGallery(5)">Ver más</button></div>
+                </div>
+
+                <div class="img min-out">
+                    <img src="projects/p_005/min/07.png" alt="">
+                    <div class="see-more"><button onclick="toFullGallery(6)">Ver más</button></div>
+                </div>
+
+                <div class="img min-out">
+                    <img src="projects/p_005/min/08.png" alt="">
+                    <div class="see-more"><button onclick="toFullGallery(7)">Ver más</button></div>
+                </div>
+
+            </div>
+        </div>
+        <script src="js/min-gallery.js"></script>
+    </section>
+
+    <section id="ficha-title">
+        <p>Ficha del proyecto</p>
+    </section>
+
+    <section id="ficha-container">
+
+        <div class="ficha-data">
+            <div class="data-title">
+                <p>OBRA</p>
+            </div>
+            <div class="data-content">
+                <div></div>
+                <p>Vivienda Multifamiliar</p>
+            </div>
+        </div>
+
+        <div class="ficha-data">
+            <div class="data-title">
+                <p>A — O</p>
+            </div>
+            <div class="data-content">
+                <div></div>
+                <p>2018</p>
+            </div>
+        </div>
+
+        <div class="ficha-data">
+            <div class="data-title">
+                <p>Superficie Terreno</p>
+            </div>
+            <div class="data-content">
+                <div></div>
+                <p>462 m2</p>
+            </div>
+        </div>
+
+        <div class="ficha-data">
+            <div class="data-title">
+                <p>Superficie Construída</p>
+            </div>
+            <div class="data-content">
+                <div></div>
+                <p>420 m2</p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- footer -->
+    <footer>
+        <div class="f-container">
+            <div class="f-logo"><img src="img/Logo-CM.png" alt=""></div>
+            <div class="f-data">
+                <div class="f-dir1">
+                    <p>Lavalle 353, Luján, Buenos Aires.</p>
+                    <p class="f-div">&nbsp;-&nbsp</p>
+                    <p>Teléfono oficina Luján: (11) 15/5957-0115</p>
+                </div>
+                <div class="f-dir2">
+                    <p>Hipólito Yrigoyen 897, Pehuajó, Buenos Aires.</p>
+                    <p class="f-div">&nbsp;-&nbsp</p>
+                    <p>Teléfono oficina Pehuajó: (02396) 15 604-111</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer -->
+</body>
+
+<script src="js/scripts.js"></script>
+<script src=""></script>
+
+</html>

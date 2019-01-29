@@ -23,7 +23,13 @@ function toFullGallery(idx) {
 
 }
 
+var fullCanMove = true;
+
 function changeFullImage(index, dir) {
+
+    if (!fullCanMove) return;
+    fullCanMove = false;
+    setTimeout(function(){fullCanMove = true}, 1500);
 
     prevImg = index;
     nextImg = index;

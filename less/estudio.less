@@ -1,10 +1,11 @@
 #estudio {
     position: relative;
     width: 100%;
-    height: calc(100vh);
-    max-height: 750px;
-    min-height: 600px;
+    height: auto;
+    max-height: 850px;
+    min-height: 700px;
     display: flex;
+    flex-direction: column;
 }
 
 .estudio-container{
@@ -32,18 +33,24 @@
     width: 100%;
     max-width: 770px;
     margin: 0 auto;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 300;
     text-align: justify;
     line-height: 21px;
 }
 
-#estudio img {
-    position: absolute;
-    width: 450px;
-    height: fit-content;
-    right: 0;
-    bottom: 0;
+#studio-img {
+    margin-top: 80px;
+    width: 100%;
+}
+
+#img-min {
+    display: none;
+}
+
+#img-full {
+    width: 100%;
+    height: auto;
 }
 
 #first-line{
@@ -64,27 +71,35 @@
         height: fit-content;
     }
 
-
-    #estudio img {
-        position: initial;
-        display: block;
-        margin: 0 auto;
-        width: 100%;
-        max-width: 500px;
-        height: auto;
-    }
-
+    
     #first-line {
         right: initial;
         left: 0;
         height: calc(90vw);
         min-height: 430px;
     }
-
+    
 }
 
-@media screen and(max-width: 500px){
-
+@media screen and(max-width: 600px){
+    
+    #studio-img {
+        margin-top: initial;
+        width: 100%;
+    }
+    
+    #img-full {
+        display: none;
+    }
+    
+    #img-min {
+        position: initial;
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        height: auto;
+    }
+    
     #first-line {
         height: 350px;
         min-height: initial;

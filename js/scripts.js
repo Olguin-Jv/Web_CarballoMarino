@@ -87,6 +87,10 @@ function onResizeAction() {
     hideOnResize();
 }
 
+
+
+
+
 function onScrollAction() {
     isScrolledIntoView(['first-line', 'second-line', 'third-line']);
     checkVisibleSection('estudio');
@@ -97,4 +101,24 @@ function onScrollAction() {
 
 window.onload = function(){
     activateMenuButtons();
+}
+
+
+var projectsIdx = 3,
+    projectsContainer = document.getElementById('p-container');
+
+function loadMore(){
+    console.log('load')
+    for (var i = 0; i < 4; i++){
+        projectsIdx++;
+        if(projectsContainer.children[projectsIdx] !== 'undefined'){
+            projectsContainer.children[projectsIdx].className = 'thumbnail'
+            console.log();
+        } else {
+            console.log('load failed')
+            return
+        };
+
+    }
+
 }

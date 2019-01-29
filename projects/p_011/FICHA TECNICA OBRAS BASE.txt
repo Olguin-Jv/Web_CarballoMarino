@@ -1,0 +1,9 @@
+OBRA:Vivienda Unifamiliar
+
+UBICACION: Lujan - Bs. As.
+
+AÑO:2012
+
+SUPERFICIE TERRENO:655 m2
+
+SUPERFICIE CONSTRUIDA:140 m2

@@ -7,6 +7,19 @@
     align-items: center;
 }
 
+.hover-efect {
+    position: absolute;
+    width: 100%;
+    height: 98.5%;
+    background: black;
+    transition: opacity .5s;
+    opacity: 0;
+}
+
+.hover-efect:hover {
+    opacity: .5;
+}
+
 #p-container {
     width: 80%;
     max-width: 830px;
@@ -24,7 +37,11 @@
     position: relative;
     width: 42%;
     margin: 6px;
-    height: fit-content;
+    height: auto;
+}
+
+.unload {
+    display: none;
 }
 
 .thumbnail img{
@@ -42,6 +59,7 @@
     color: white;
     display: flex;
     flex-direction: row;
+    pointer-events: none;
 }
 
  .data {
@@ -82,6 +100,7 @@
     font-size: 12px;
     font-weight: 400;
     color: white;
+    pointer-events: initial;
 }
 
 .ver-mas {
@@ -90,11 +109,14 @@
     margin-top: 31px;
     background: #e7205b;
 }
-.ver-mas p {
+.ver-mas button {
     font-size: 14px;
     font-weight: 700;
     color: white;
     text-transform: uppercase;
+    width: fit-content;
+    cursor: pointer;
+    z-index: 20;
 }
 
 #third-line {

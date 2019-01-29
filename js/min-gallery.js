@@ -2,12 +2,16 @@ var gallery = document.getElementById('gallery-images');
 
 var minLeft = 0,
     minCenter = 1,
-    minRight = 2;
+    minRight = 2,
+    minCanMove = true;
 
 function changeIdx(arr, direction) {
 
     var length = arr.childElementCount;
 
+    if (!minCanMove) return;
+    minCanMove = false;
+    setTimeout(function(){minCanMove = true}, 1000)
     if (length == 3) return;
 
     outLeft = minLeft;
