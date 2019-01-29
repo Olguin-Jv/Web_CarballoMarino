@@ -4,7 +4,6 @@ var fullGallery = document.getElementById('gallery'),
     fullLimit = fullGallery.childElementCount;
 function toFullGallery(idx) {
     document.getElementById('full-gallery').style.display = 'flex';
-    console.log(idx);
 
     for (var i = 0; i < fullGallery.childElementCount; i++) {
 
@@ -39,7 +38,6 @@ function changeFullImage(index, dir) {
         if (nextImg >= fullLimit) {
             nextImg = 0;
         }
-        console.log(fullGallery)
         fullGallery.children[prevImg].className = 'full-to-left';
         fullGallery.children[nextImg].className = 'full-from-right';
         
@@ -51,7 +49,6 @@ function changeFullImage(index, dir) {
             nextImg = fullLimit - 1;
         }
         
-        console.log(prevImg, nextImg)
         fullGallery.children[prevImg].className = 'full-to-right';
         fullGallery.children[nextImg].className = 'full-from-left';
 

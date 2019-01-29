@@ -5,10 +5,6 @@ var gallery = document.getElementById('gallery'), // gallery container name
     canMoveInterval = 1500,
     limit = gallery.childElementCount;
 
-
-console.log(limit);
-
-
 function changeImg(direction) {
 
     if (direction == 'next' && canMove) {
@@ -64,9 +60,8 @@ function changeImg(direction) {
 }
 
 for (var i = 0; i < limit; i++) {
-    gallery.children[i].addEventListener('click', function () {
-        console.log(this);
-    })
+    // gallery.children[i].addEventListener('click', function () {
+    // })
 
     var dot = document.createElement('div');
     dot.className = 'dot-off';
@@ -79,7 +74,6 @@ function restartAutoScroll() {
     clearInterval(autoScroll);
     autoScroll = setInterval(function () {
         changeImg('next');
-        console.log('to next');
     }, 5000);
 }
 
@@ -99,6 +93,5 @@ function appendShit(parentName) {
 }
 
 var autoScroll = setInterval(function () {
-        changeImg('next');
-        console.log('to next');
-    }, 5000);
+    changeImg('next');
+}, 5000);
