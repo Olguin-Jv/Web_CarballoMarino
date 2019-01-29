@@ -581,6 +581,82 @@ button img {
     min-height: initial;
   }
 }
+#lines-wrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  border: 1px solid black;
+}
+#left-line,
+#right-line {
+  position: absolute;
+  height: 90%;
+  width: 10px;
+}
+#left-line {
+  background: #fdc929;
+  bottom: -100%;
+}
+#right-line {
+  background: #61d8c2;
+  right: 0%;
+  top: -100%;
+}
+.line-from-top {
+  -webkit-animation-name: lineFromTop;
+  animation-name: lineFromTop;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+@-webkit-keyframes lineFromTop {
+  from {
+    top: -100%;
+  }
+  to {
+    top: 0%;
+  }
+}
+@keyframes lineFromTop {
+  from {
+    top: -100%;
+  }
+  to {
+    top: 0%;
+  }
+}
+.line-from-bottom {
+  -webkit-animation-name: lineFromBottom;
+  animation-name: lineFromBottom;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+@-webkit-keyframes lineFromBottom {
+  from {
+    bottom: -100%;
+  }
+  to {
+    bottom: 0%;
+  }
+}
+@keyframes lineFromBottom {
+  from {
+    bottom: -100%;
+  }
+  to {
+    bottom: 0%;
+  }
+}
 #servicios {
   position: relative;
   width: 100%;

@@ -1,0 +1,57 @@
+#lines-wrapper {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+#left-line, #right-line {
+    position: absolute;
+    height: 90%;
+    width: 10px;
+}
+
+#left-line {
+    background: #fdc929;
+    bottom: -100%;
+
+}
+
+#right-line {
+    background: #61d8c2;
+    right: 0%;
+    top: -100%;
+}
+
+.line-from-top{
+    animation-name: lineFromTop;
+    animation-duration: 1.5s;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards
+}
+
+@keyframes lineFromTop {
+    from {
+        top: -100%;
+    }
+    to {
+        top: 0%;
+    }
+}
+
+.line-from-bottom{
+    animation-name: lineFromBottom;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards
+}
+
+@keyframes lineFromBottom {
+    from {
+        bottom: -100%;
+    }
+    to {
+        bottom: 0%;
+    }
+}

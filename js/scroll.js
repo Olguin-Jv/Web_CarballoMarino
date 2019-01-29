@@ -1,10 +1,10 @@
 
-var scrollIdx = 0;
+var scrollMark = true;
 function isScrolledIntoView(el) {
 
-    if (scrollIdx == el.length) return;
+    if (!scrollMark) return;
 
-    var actualElement = document.getElementById(el[scrollIdx]),
+    var actualElement = document.getElementById(el),
         rect = actualElement.getBoundingClientRect(),
         elemTop = rect.top,
         elemBottom = rect.bottom;
@@ -14,9 +14,9 @@ function isScrolledIntoView(el) {
     // Partially visible elements return true:
     var isVisible = elemTop < window.innerHeight && elemBottom >= 0;
     if (isVisible) {
-        // document.getElementById(el[scrollIdx]).className = 'line-in';
-        console.log(actualElement);
-        scrollIdx++;
+        document.getElementById('left-line').className ='line-from-bottom';
+        document.getElementById('right-line').className ='line-from-top';
+        scrollMark = false;
     }
 }
 
@@ -52,7 +52,7 @@ function paintButton(elem) {
 }
 
 function onScrollAction() {
-    isScrolledIntoView(['first-line', 'second-line', 'third-line']);
+    isScrolledIntoView(['lines-action']);
     checkVisibleSection('estudio');
     checkVisibleSection('servicios');
     checkVisibleSection('proyectos');
