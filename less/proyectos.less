@@ -110,34 +110,29 @@
     margin-top: 31px;
     background: #e7205b;
 }
+
 .ver-mas button {
     font-size: 14px;
     font-weight: 500;
     color: white;
     text-transform: uppercase;
     width: fit-content;
+    height: fit-content;
     cursor: pointer;
     z-index: 20;
 }
 
-#third-line {
-    position: absolute;
-    top: 5%;
-    height: 500px;
-    right: calc(100vw * .9);
-    height: 1000px;
-    width: 5px;
-    background: #fdc929;
-    z-index: 0;
+.ver-mas button:hover {
+    border-bottom: 1px solid white;
 }
 
 @media screen and (max-width: 780px) {
-
+    
     #p-container{
         width: 100%;
         min-width: initial;
     }
-
+    
     //----------------------
     .thumbnail{
         width: 70%;
@@ -171,15 +166,11 @@
     .link {
         width: 28%;
     }
-
-    .ver-mas p {
-        font-size: 12px;
-    }
     
-    #third-line {
-        left: 0;
-        height: 90%;
+    .ver-mas button:hover {
+        border-bottom: none;
     }
+
 }
 
 @media screen and (max-width: 630px) {
@@ -195,9 +186,11 @@
         height: 100%;
     }
 
+
 }
 
 @media screen and (max-width: 400px){
+    
     .thumbnail{
         width: 100%;
         margin: 3px 0px;

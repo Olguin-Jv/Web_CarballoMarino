@@ -56,7 +56,7 @@ function loadMore(){
         } else {
             if(!projectsContainer.children[(projectsIdx + 1)]){
                 document.getElementById('mas-proyectos').style.opacity = '.5';
-                document.getElementById('mas-proyectos').style.cursor = 'initial';
+                document.getElementById('mas-proyectos').style.pointerEvents = 'none';
             }            
         }
 
