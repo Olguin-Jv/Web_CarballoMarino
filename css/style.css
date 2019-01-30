@@ -880,9 +880,7 @@ button img {
   font-weight: 500;
   color: white;
   text-transform: uppercase;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: auto;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
