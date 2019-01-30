@@ -45,15 +45,20 @@ var projectsIdx = 3,
 
 function loadMore(){
     console.log('load')
-    for (var i = 0; i < 4; i++){
-        projectsIdx++;
-        if(projectsContainer.children[projectsIdx] !== 'undefined'){
-            projectsContainer.children[projectsIdx].className = 'thumbnail'
-            console.log();
+    for (var i = 0; i < 5; i++){
+
+        if (i < 4){
+            projectsIdx++;
+            if(projectsContainer.children[projectsIdx]){
+                projectsContainer.children[projectsIdx].className = 'thumbnail'
+                console.log();
+            }
         } else {
-            console.log('load failed')
-            return
-        };
+            if(!projectsContainer.children[(projectsIdx + 1)]){
+                document.getElementById('mas-proyectos').style.opacity = '.5';
+                document.getElementById('mas-proyectos').style.cursor = 'initial';
+            }            
+        }
 
     }
 

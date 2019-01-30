@@ -60,9 +60,6 @@ function changeImg(direction) {
 }
 
 for (var i = 0; i < limit; i++) {
-    // gallery.children[i].addEventListener('click', function () {
-    // })
-
     var dot = document.createElement('div');
     dot.className = 'dot-off';
     dotsContainer.appendChild(dot);
@@ -75,21 +72,6 @@ function restartAutoScroll() {
     autoScroll = setInterval(function () {
         changeImg('next');
     }, 5000);
-}
-
-function appendShit(parentName) {
-    //se copia el parent junto a sus hijos
-    var getImages = document.getElementById('image');
-    for (var i = 0; i < limit; i++) {
-
-        //se clona nodo por nodo
-        var node = getImages.children[i].cloneNode();
-
-        //se ajunta el nodo
-        document.getElementById(parentName).appendChild(node);
-
-        //recordar eliminar todo esto al hacerle close
-    };
 }
 
 var autoScroll = setInterval(function () {

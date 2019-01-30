@@ -2,6 +2,7 @@ var fullIdx;
 
 var fullGallery = document.getElementById('gallery'),
     fullLimit = fullGallery.childElementCount;
+
 function toFullGallery(idx) {
     document.getElementById('full-gallery').style.display = 'flex';
 
@@ -15,11 +16,8 @@ function toFullGallery(idx) {
                 fullGallery.children[i].className = 'full-out';
                 break;
         }
-
     }
-
     fullIdx = idx;
-
 }
 
 var fullCanMove = true;
@@ -40,7 +38,6 @@ function changeFullImage(index, dir) {
         }
         fullGallery.children[prevImg].className = 'full-to-left';
         fullGallery.children[nextImg].className = 'full-from-right';
-        
     }
     
     if (dir == 'prev') {
@@ -48,14 +45,11 @@ function changeFullImage(index, dir) {
         if (nextImg < 0) {
             nextImg = fullLimit - 1;
         }
-        
         fullGallery.children[prevImg].className = 'full-to-right';
         fullGallery.children[nextImg].className = 'full-from-left';
 
     }
-
     fullIdx = nextImg;
-
 }
 
 function closeFullGallery() {
