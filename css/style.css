@@ -537,6 +537,9 @@ button img {
 #img-full {
   width: 100%;
   height: auto;
+  -webkit-transform: scaleY(-1);
+  -ms-transform: scaleY(-1);
+  transform: scaleY(-1);
 }
 #first-line {
   position: absolute;
