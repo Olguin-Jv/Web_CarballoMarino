@@ -33,6 +33,8 @@ function activateMenuButtons(){
 
 function onResizeAction() {
     hideOnResize();
+    checkOrientation();
+    checkResponsiveImg();
 }
 
 window.onload = function(){

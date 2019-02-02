@@ -93,6 +93,14 @@
     animation-fill-mode: forwards;
 }
 
+[data-orientation="port"] {
+    transform: rotate(-90deg);
+}
+
+[data-orientation="land"] {
+    transform: rotate(0deg);
+}
+
 @keyframes fullToLeft {
     from{
         transform: translate(0%, 0%);

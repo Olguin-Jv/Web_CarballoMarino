@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/projects-gallery.css">
 </head>
 
-<body onresize="onResizeAction()" >
+<body onresize="onResizeAction()">
 
     <section id="menu-desplegable" class="menu-off">
         <div><a class="burger-link" href="index.html#anchor-estudio">Estudio</a></div>
@@ -40,32 +40,33 @@
     <!-- nav -->
 
     <section id="full-gallery">
-        
-            <div id="gallery-container">
-                <div id="gallery">
-                    <img class="" src="projects/p_000/full/01.jpg" alt="">
-                    <img class="" src="projects/p_000/full/02.jpg" alt="">
-                    <img class="" src="projects/p_000/full/03.jpg" alt="">
-                    <img class="" src="projects/p_000/full/04.jpg" alt="">
-                    <img class="" src="projects/p_000/full/05.jpg" alt="">
-                    <img class="" src="projects/p_000/full/06.jpg" alt="">
-                    <img class="" src="projects/p_000/full/07.jpg" alt="">
-                    <img class="" src="projects/p_000/full/08.jpg" alt="">
-                </div>
-                <div id="gallery-buttons">
-                    <button onclick="fullToPrev()"><img class="g-first-btn" src="img/full-gal-arrow.svg" alt=""></button>
-                    <button onclick="closeFullGallery()"><img src="img/full-cross.png" alt=""></button>
-                    <button onclick="fullToNext()"><img class="g-last-btn" src="img/full-gal-arrow.svg" alt=""></button>
-                </div>
+
+        <div id="gallery-container">
+            <div id="gallery">
+                <img class="" data-responsive="false" src="projects/p_000/full/01.jpg">
+                <img class="" data-responsive="true" src="projects/p_000/full/02.jpg">
+                <img class="" data-responsive="false" src="projects/p_000/full/03.jpg">
+                <img class="" data-responsive="false" src="projects/p_000/full/04.jpg">
+                <img class="" data-responsive="false" src="projects/p_000/full/05.jpg">
+                <img class="" data-responsive="false" src="projects/p_000/full/06.jpg">
+                <img class="" data-responsive="false" src="projects/p_000/full/07.jpg">
+                <img class="" data-responsive="false" src="projects/p_000/full/08.jpg">
             </div>
+            <div id="gallery-buttons">
+                <button onclick="fullToPrev()"><img class="g-first-btn" src="img/full-gal-arrow.svg" alt=""></button>
+                <button onclick="closeFullGallery()"><img src="img/full-cross.png" alt=""></button>
+                <button onclick="fullToNext()"><img class="g-last-btn" src="img/full-gal-arrow.svg" alt=""></button>
+            </div>
+        </div>
+        <script src="js/full-gallery-test.js"></script>
         <script src="js/full-gallery.js"></script>
     </section>
 
     <section id="project-title">
-        <p>- Deptos San Martín -</p>
+        <p data-title='custom'>- Deptos San Martín -</p>
     </section>
 
-    <section id="projects-gallery"> 
+    <section id="projects-gallery">
         <div id="gal-button-left"><button onclick="minToLeft()"><img src="img/gallery-arrow.svg" alt=""></button></div>
         <div id="gal-button-right"><button onclick="minToRight()"><img src="img/gallery-arrow.svg" alt=""></button></div>
 

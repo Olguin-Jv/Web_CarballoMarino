@@ -5,7 +5,7 @@ var fullGallery = document.getElementById('gallery'),
 
 function toFullGallery(idx) {
     document.getElementById('full-gallery').style.display = 'flex';
-
+    
     for (var i = 0; i < fullGallery.childElementCount; i++) {
 
         switch (idx) {
@@ -18,11 +18,15 @@ function toFullGallery(idx) {
         }
     }
     fullIdx = idx;
+    fullGalleryState = true;
+    checkResponsiveImg();
 }
 
 var fullCanMove = true;
-
+var fullGalleryState = false
 function changeFullImage(index, dir) {
+
+    fullGalleryState = true;
 
     if (!fullCanMove) return;
     fullCanMove = false;
@@ -50,10 +54,12 @@ function changeFullImage(index, dir) {
 
     }
     fullIdx = nextImg;
+    checkResponsiveImg()
 }
 
 function closeFullGallery() {
     document.getElementById('full-gallery').style.display = 'none';
+    fullGalleryState = false;
 }
 
 function fullToPrev(){
@@ -63,3 +69,8 @@ function fullToPrev(){
 function fullToNext(){
     changeFullImage(fullIdx, 'next')
 }
+
+
+//para responsivear las imágenes.
+//colocar clases a las etiquetas img. cosa de ubicarlas con el mismo index de la imágen
+//usar custom data para chequear si la img necesita responsivear o no
