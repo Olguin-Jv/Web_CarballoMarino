@@ -8,8 +8,8 @@ function toFullGallery(idx) {
     
     for (var i = 0; i < fullGallery.childElementCount; i++) {
 
-        switch (idx) {
-            case i:
+        switch (i) {
+            case idx:
                 fullGallery.children[i].className = 'full-center';
                 break;
             default:

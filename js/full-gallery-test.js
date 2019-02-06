@@ -11,30 +11,41 @@
 
 var isPortrait = true;
 function checkResponsiveImg() {
-
+    
     if (!fullGalleryState) return;
-    console.log("gallery-on");
+    // console.log("gallery-on");
     checkOrientation();
 
-    var img = fullGallery.children[fullIdx];
-    var customParam = img.dataset.responsive;
-    console.log(customParam);
+    var elem = fullGallery.children[fullIdx];
+    var customParam = elem.dataset.responsive;
+    // console.log(customParam);
     if (customParam == 'false') return;
     
-    console.log('check portrait')
-    console.log(`orientation: ${isPortrait}`);
+    // console.log('check portrait')
+    // console.log(`orientation: ${isPortrait}`);
 
-    img.style = 'transform: initial';
+    var elemHeight = elem.getBoundingClientRect().height;
+    var elemWidth = elem.getBoundingClientRect().width;
+    
+
     if (isPortrait) {
-        img.style = 'transform: rotate(-90deg)';
+        elem.children[0].style = 'transform: rotate(-90deg)';
+        // elem.children[0].style.width = elemHeight+'px';
+        // elem.children[0].style.height = elemWidth+'px';
         console.log('90deg');
     }
     if(!isPortrait){
-        img.style = 'transform: rotate(0deg)';
+        elem.children[0].style = 'transform: rotate(0deg)';
+        elem.children[0].style.width = 'auto';
+        elem.children[0].style.height = 'auto';
         console.log('0deg');
     }
 
+    console.log(elem.children[0].getBoundingClientRect().height);
+
 }
+
+
 
 function checkOrientation() {
     var width = window.innerWidth,

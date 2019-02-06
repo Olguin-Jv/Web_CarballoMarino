@@ -350,16 +350,3 @@
     transform: translate(250%, 0%) scale(0.9);
   }
 }
-[data-orientation="port"] {
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
-}
-[data-orientation="land"] {
-  -webkit-transform: rotate(0deg);
-  -ms-transform: rotate(0deg);
-  transform: rotate(0deg);
-}
-[data-title="custom"] {
-  background: black;
-}
