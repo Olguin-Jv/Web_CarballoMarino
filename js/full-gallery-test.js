@@ -7,6 +7,8 @@
  * 
  * luego solucionar el problema con el archivo full-gallery.less
  * que al parecer no compila bien
+ * 
+ * usar el vh - hacer que el ancho del div sea igual que el vh
  */
 
 var isPortrait = true;
@@ -27,17 +29,18 @@ function checkResponsiveImg() {
     var elemHeight = elem.getBoundingClientRect().height;
     var elemWidth = elem.getBoundingClientRect().width;
     
-
+    
     if (isPortrait) {
+        var aspect = window.innerHeight * 80 / 100;
+        elem.style.width = aspect +'px'; //CHECK
         elem.children[0].style = 'transform: rotate(-90deg)';
-        // elem.children[0].style.width = elemHeight+'px';
-        // elem.children[0].style.height = elemWidth+'px';
+        // elem.children[0].style.width = `${elemHeight}px`;
+        // elem.children[0].style.height = `initial`;
         console.log('90deg');
     }
-    if(!isPortrait){
+    if(!isPortrait){        
+        elem.style = '100%';
         elem.children[0].style = 'transform: rotate(0deg)';
-        elem.children[0].style.width = 'auto';
-        elem.children[0].style.height = 'auto';
         console.log('0deg');
     }
 
