@@ -1,16 +1,3 @@
-/**
- * el error se debe a que para mover los elementos también se usa TRANSFORM
- * por lo tanto no mantiene su estado al cambiar entre imagenes.
- * para ello hay que crear un div que contenga la imágen y éste sea el que se mueva
- * y aplicar la rotación a la imágen que este contiene
- * para no entrar en conflicto con el TRANSFORM
- * 
- * luego solucionar el problema con el archivo full-gallery.less
- * que al parecer no compila bien
- * 
- * usar el vh - hacer que el ancho del div sea igual que el vh
- */
-
 var isPortrait = true;
 function checkResponsiveImg() {
     

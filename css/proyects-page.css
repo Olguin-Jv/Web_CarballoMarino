@@ -544,7 +544,8 @@ footer {
 }
 #gallery div img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  max-width: auto;
   -o-object-fit: contain;
   object-fit: contain;
 }
@@ -557,9 +558,6 @@ footer {
   -webkit-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
   transform: rotate(0deg);
-}
-[data-title="custom"] {
-  background: black;
 }
 #gallery-buttons {
   position: fixed;

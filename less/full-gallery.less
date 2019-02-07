@@ -29,7 +29,6 @@
     width: 80%;
     min-width: initial;
     margin: 0 auto;
-    // background: grey;
     display: flex;  //CHECK
     justify-content: center; //CHECK
     align-items: center; //CHECK
@@ -39,8 +38,6 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    // background: blue;
-    // border: 3px solid pink;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -49,8 +46,13 @@
 }
 
 #gallery div img { // check
+    // width: 100%;
+    // height: auto;
+    // object-fit: contain;
     width: 100%;
-    height: auto;
+    height: 100%;
+    max-width: auto;
+    max-width: auto;
     object-fit: contain;
 }
 
@@ -61,11 +63,6 @@
 [data-orientation="land"] {
     transform: rotate(0deg);
 }
-
-[data-title="custom"] { //check
-    background: black;
-}
-
 
 #gallery-buttons {
     position: fixed;
