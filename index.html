@@ -8,11 +8,11 @@
     <title>Carballo Marino - Arquitectos</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 </head>
 
-<body onresize="onResizeAction()" onscroll="onScrollAction()">
+<body onresize="hideOnResize()" onscroll="onScrollAction()">
 
     <section id="menu-desplegable" class="menu-off">
         <div><a class="burger-link" href="#anchor-estudio">Estudio</a></div>
@@ -56,10 +56,12 @@
 
         </div>
         <div id="left-arrow">
-            <div class="center"><button onclick="changeImg('prev')"><img src="img/gallery-arrow.svg" alt=""></button></div>
+            <div class="center"><button onclick="changeImg('prev')"><img src="img/gallery-arrow.svg" alt=""></button>
+            </div>
         </div>
         <div id="right-arrow">
-            <div class="center"><button onclick="changeImg('next')"><img src="img/gallery-arrow.svg" alt=""></button></div>
+            <div class="center"><button onclick="changeImg('next')"><img src="img/gallery-arrow.svg" alt=""></button>
+            </div>
         </div>
     </section>
     <script src="js/hero-gallery.js"></script>
@@ -72,7 +74,7 @@
 
         <div class="estudio-container">
             <h3>Equilibrio expresivo y funcional</h3>
-            <h4>En una búsqueda sin límites</h4>
+            <!-- <h4>En una búsqueda sin límites</h4> -->
             <p>Somos un estudio de arquitectura con una fuerte vocación de servicio, enfocado a brindar soluciones a
                 medida para cada uno de nuestros clientes.</p>
             <p> Desde el 2012, nos dedicamos al proyecto y desarrollo de obras de arquitectura de diferentes escalas,
@@ -177,12 +179,12 @@
                     <div class='hover-efect'></div>
                     <div class="p-description">
                         <div class="data">
-                            <h4>Vivienda multifamiliar - Deptos San Martín</h4>
+                            <h4>Vivienda multifamiliar</h4>
                             <p>Luján - Bs.As.</p>
                         </div>
                         <div class="link">
                             <div>
-                                <a href="dts_san_martin.html">Ver más</a>
+                                <a href="01_v-multi.html">Ver más</a>
                             </div>
                         </div>
                     </div>
@@ -198,7 +200,7 @@
                         </div>
                         <div class="link">
                             <div>
-                                <a href="tropel.html">Ver más</a>
+                                <a href="02_tropel.html">Ver más</a>
                             </div>
                         </div>
                     </div>
@@ -209,12 +211,12 @@
                     <div class='hover-efect'></div>
                     <div class="p-description">
                         <div class="data">
-                            <h4>Vivienda Unifamiliar - Camerano</h4>
+                            <h4>Vivienda Unifamiliar</h4>
                             <p>Lujan - Bs.As.</p>
                         </div>
                         <div class="link">
                             <div>
-                                <a href="camerano.html">Ver más</a>
+                                <a href="03_v-multi.html">Ver más</a>
                             </div>
                         </div>
                     </div>
@@ -225,12 +227,12 @@
                     <div class='hover-efect'></div>
                     <div class="p-description">
                         <div class="data">
-                            <h4>Vivienda multifamiliar - Battistotti</h4>
+                            <h4>Vivienda multifamiliar</h4>
                             <p>Luján - Bs.As.</p>
                         </div>
                         <div class="link">
                             <div>
-                                <a href="battistotti.html">Ver más</a>
+                                <a href="04_v-multi.html">Ver más</a>
                             </div>
                         </div>
                     </div>
@@ -246,7 +248,7 @@
                         </div>
                         <div class="link">
                             <div>
-                                <a href="escuela_medalla.html">Ver más</a>
+                                <a href="05_escuela-medalla.html">Ver más</a>
                             </div>
                         </div>
                     </div>
@@ -257,12 +259,12 @@
                     <div class='hover-efect'></div>
                     <div class="p-description">
                         <div class="data">
-                            <h4>Vivienda Multifamiliar - Arballo</h4>
+                            <h4>Vivienda Multifamiliar</h4>
                             <p>Luján - Bs.As.</p>
                         </div>
                         <div class="link">
                             <div>
-                                <a href="arballo.html">Ver más</a>
+                                <a href="06_v-multi.html">Ver más</a>
                             </div>
                         </div>
                     </div>
@@ -278,7 +280,7 @@
                         </div>
                         <div class="link">
                             <div>
-                                <a href="baum.html">Ver más</a>
+                                <a href="07_baum.html">Ver más</a>
                             </div>
                         </div>
                     </div>
@@ -289,12 +291,12 @@
                     <div class='hover-efect'></div>
                     <div class="p-description">
                         <div class="data">
-                            <h4>Vivienda Unifamiliar - Castiglia</h4>
+                            <h4>Vivienda Unifamiliar</h4>
                             <p>Luján - Bs.As.</p>
                         </div>
                         <div class="link">
                             <div>
-                                <a href="castiglia.html">Ver más</a>
+                                <a href="08_v-uni.html">Ver más</a>
                             </div>
                         </div>
                     </div>
@@ -305,12 +307,12 @@
                     <div class='hover-efect'></div>
                     <div class="p-description">
                         <div class="data">
-                            <h4>Vivienda Unifamiliar - Brando</h4>
+                            <h4>Vivienda Unifamiliar</h4>
                             <p>Luján - Bs.As.</p>
                         </div>
                         <div class="link">
                             <div>
-                                <a href="brando.html">Ver más</a>
+                                <a href="09_v-uni.html">Ver más</a>
                             </div>
                         </div>
                     </div>
@@ -321,12 +323,12 @@
                     <div class='hover-efect'></div>
                     <div class="p-description">
                         <div class="data">
-                            <h4>Vivienda Unifamiliar - Massola</h4>
+                            <h4>Vivienda Unifamiliar</h4>
                             <p>Pehuajó - Bs.As.</p>
                         </div>
                         <div class="link">
                             <div>
-                                <a href="massola.html">Ver más</a>
+                                <a href="10_v-uni.html">Ver más</a>
                             </div>
                         </div>
                     </div>
@@ -342,7 +344,7 @@
                         </div>
                         <div class="link">
                             <div>
-                                <a href="grupo_mas.html">Ver más</a>
+                                <a href="11_grupo-mas.html">Ver más</a>
                             </div>
                         </div>
                     </div>
@@ -353,12 +355,12 @@
                     <div class='hover-efect'></div>
                     <div class="p-description">
                         <div class="data">
-                            <h4>Vivienda Unifamiliar - Castro</h4>
+                            <h4>Vivienda Unifamiliar</h4>
                             <p>Pehuajó - Bs.As.</p>
                         </div>
                         <div class="link">
                             <div>
-                                <a href="castro.html">Ver más</a>
+                                <a href="12_v-uni.html">Ver más</a>
                             </div>
                         </div>
                     </div>
@@ -398,12 +400,10 @@
                 <li><strong>Mitre 1060, Pehuajó, Buenos Aires.</strong></li>
             </ul>
             <p>Buscanos en nuestras redes sociales.</p>
-            <ul>
-                <li>
-                    <a href="https://www.facebook.com/CarmaArquitectura/" target="_blank"><img src="img/facebook-icon.svg"
-                            alt=""></a>
-                </li>
-            </ul>
+            <div id="redes">
+                <a href="https://www.facebook.com/CarmaArquitectura/" target="_blank"><img src="img/facebook-icon.svg" alt=""></a>
+                <a href="https://www.facebook.com/CarmaArquitectura/" target="_blank"><img src="img/facebook-icon.svg" alt=""></a>
+            </div>
         </div>
 
     </section>

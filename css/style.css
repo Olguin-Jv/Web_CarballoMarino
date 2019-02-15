@@ -511,12 +511,11 @@ button img {
 .estudio-container h3 {
   font-size: 28px;
   font-weight: 300;
-  margin-bottom: 10px;
+  margin-bottom: 50px;
 }
 .estudio-container h4 {
   font-size: 18px;
   font-weight: 500;
-  margin-bottom: 50px;
 }
 .estudio-container p {
   width: 100%;
@@ -1009,6 +1008,9 @@ li {
   pointer-events: none;
   z-index: 2;
 }
+#redes a:first-child {
+  margin: 0 30px 0  20px;
+}
 @media screen and (max-width: 450px) {
   #contacto {
     height: 530px;
@@ -1025,6 +1027,9 @@ li {
   #contacto .bkg {
     width: 100%;
     min-width: initial;
+  }
+  #redes a:first-child {
+    margin: 0 20px 0  0px;
   }
 }
 footer {
