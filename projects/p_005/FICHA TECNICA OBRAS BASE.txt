@@ -2,9 +2,10 @@ OBRA:Vivienda Multifamiliar
 
 UBICACION: Lujan - Bs. As.
 
-AÑO:2018
+Aï¿½O:2018
 
 SUPERFICIE TERRENO:462 m2
 
 SUPERFICIE CONSTRUIDA:420 m2
 
+ 
