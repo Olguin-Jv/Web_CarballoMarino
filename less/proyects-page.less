@@ -100,6 +100,10 @@
     font-family: initial;
 }
 
+.br-baum {
+    display: none;
+}
+
 @media screen and(max-width: 660px) {
 
     #project-title {
@@ -129,6 +133,21 @@
         margin-bottom: 10px;
     }
     
+}
+
+@media screen and(max-width: 500px) {
+    #project-title p:first-child {
+        font-size: 27px;
+    }
+
+    #project-title span {
+        display: none;
+    }
+
+    .br-baum {
+        display: initial;
+    }
+
 }
 
 @import 'full-gallery.less';
